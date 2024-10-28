@@ -19,10 +19,13 @@
                 @Html.DisplayNameFor(model => model.MPDescription)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.MPFechaPublicacion)
+                @Html.DisplayNameFor(model => model.MPFechaLimite)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.MPFechaRegistro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MPPago)
             </th>
             <th></th>
         </tr>
@@ -37,10 +40,13 @@
                 @Html.DisplayFor(modelItem => item.MPDescription)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.MPFechaPublicacion)
+                @Html.DisplayFor(modelItem => item.MPFechaLimite)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.MPFechaRegistro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MPPago)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.MPID">Edit</a> |

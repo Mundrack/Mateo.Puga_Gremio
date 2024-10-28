@@ -4,6 +4,7 @@ using Mateo.Puga_Examen_Progreso_I.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Mateo.Puga_Examen_Progreso_I.Migrations
 {
     [DbContext(typeof(MateoPuga_Examen_Progreso_IContext))]
-    partial class MateoPuga_Examen_Progreso_IContextModelSnapshot : ModelSnapshot
+    [Migration("20241028191202_AddPagoPropiedad")]
+    partial class AddPagoPropiedad
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

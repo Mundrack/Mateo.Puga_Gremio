@@ -19,6 +19,7 @@ namespace Mateo.Puga_Examen_Progreso_I.Controllers
             _context = context;
         }
 
+
         // GET: MPs
         public async Task<IActionResult> Index()
         {
@@ -54,7 +55,7 @@ namespace Mateo.Puga_Examen_Progreso_I.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("MPID,MPNameLibro,MPDescription,MPFechaPublicacion,MPFechaRegistro")] MP mP)
+        public async Task<IActionResult> Create([Bind("MPID,MPNameLibro,MPDescription,MPFechaRegistro, MPFechaLimite, MPPago")] MP mP)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +87,7 @@ namespace Mateo.Puga_Examen_Progreso_I.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("MPID,MPNameLibro,MPDescription,MPFechaPublicacion,MPFechaRegistro")] MP mP)
+        public async Task<IActionResult> Edit(int id, [Bind("MPID,MPNameLibro,MPDescription,MPFechaRegistro, MPFechaLimite, MPPago")] MP mP)
         {
             if (id != mP.MPID)
             {
