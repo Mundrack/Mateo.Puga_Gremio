@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Mateo.Puga_Examen_Progreso_I.Models.MP>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MPNameLibro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MPDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MPFechaPublicacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MPFechaRegistro)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MPNameLibro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MPDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MPFechaPublicacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MPFechaRegistro)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.MPID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.MPID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.MPID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

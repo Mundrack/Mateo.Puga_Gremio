@@ -1,0 +1,49 @@
+﻿@model Mateo.Puga_Examen_Progreso_I.Models.MP
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>MP</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="MPID" />
+            <div class="form-group">
+                <label asp-for="MPNameLibro" class="control-label"></label>
+                <input asp-for="MPNameLibro" class="form-control" />
+                <span asp-validation-for="MPNameLibro" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MPDescription" class="control-label"></label>
+                <input asp-for="MPDescription" class="form-control" />
+                <span asp-validation-for="MPDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MPFechaPublicacion" class="control-label"></label>
+                <input asp-for="MPFechaPublicacion" class="form-control" />
+                <span asp-validation-for="MPFechaPublicacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MPFechaRegistro" class="control-label"></label>
+                <input asp-for="MPFechaRegistro" class="form-control" />
+                <span asp-validation-for="MPFechaRegistro" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
